@@ -1,5 +1,5 @@
 const { request, response } = require("express");
-const { consolas } = require("../consolas");
+const { consolas } = require("../consolas.js");
 
 const getConsolas = (req, res)=> {
     return res.json({
@@ -11,10 +11,10 @@ const getConsolas = (req, res)=> {
 
 const getConsolaById = (req = request, res = response)=> {
 
-    let id = parseInt(req.params.id);
+    let id = req.params.id;
     let consolaABuscar = "";
-    consolaABuscar = consolas.find((consolas)=> {
-        return consolas.id === id;
+    consolaABuscar = consolas.find((consola)=> {
+        return consola.id === id;
     });
 
     if(consolaABuscar) {
