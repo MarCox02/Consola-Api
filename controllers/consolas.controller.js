@@ -1,5 +1,5 @@
 const { request, response } = require("express");
-const { consolas } = require("../consolas.js");
+const { consolas } = require("../consolas");
 
 const getConsolas = (req, res)=> {
     return res.json({

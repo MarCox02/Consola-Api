@@ -21,3 +21,5 @@ const consolas = [
         "precio":300000,
     },
 ];
+
+module.exports = { consolas };
