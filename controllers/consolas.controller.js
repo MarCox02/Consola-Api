@@ -13,8 +13,8 @@ const getConsolaById = (req = request, res = response)=> {
 
     let id = parseInt(req.params.id);
     let consolaABuscar = "";
-    consolaABuscar = consolas.find((juego)=> {
-        return juego.id === id;
+    consolaABuscar = consolas.find((consolas)=> {
+        return consolas.id === id;
     });
 
     if(consolaABuscar) {
@@ -27,7 +27,7 @@ const getConsolaById = (req = request, res = response)=> {
         return res.json({
             ok:true,
             statusCode:404,
-            msg:"no hay jogo"
+            msg:"no hay consola"
         });
     }
 }

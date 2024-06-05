@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const puerto = 8000;
+const puerto = 4000;
 
 const { getConsolas, getConsolaById } = require("./controllers/consolas.controller")
 
